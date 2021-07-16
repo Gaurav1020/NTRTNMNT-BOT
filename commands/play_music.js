@@ -4,6 +4,8 @@ module.exports = {
     name: 'm',
     description: 'Play Music- Beta...\n\t\t\t\t !m {command} songname(for "play" command only)\n\t\t\t\t Commands: **play** {song-name}, **stop**, **skip**, **loop**, **queue**, **pause**, **resume**, **autoplay**',
 	async execute(message, args) {
+	//COMMENT THE NEXT LINE TO MAKE THE MUSIC APP WORK WHEN NOT DEPLOYING ON HEROKU....
+	return message.channel.send("This command wont work on Heroku free deployment due to caching restrictions between the events");
         //const config = [10,20,30,40];
         //message.channel.send(JSON.stringify(config));
         //console.log(typeof config);
