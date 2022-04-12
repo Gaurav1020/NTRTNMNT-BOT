@@ -1,5 +1,5 @@
 const express = require('express');
-const port=8050;
+const port=8005;
 const path = require('path');
 const app = express();
 let ejs = require('ejs');
@@ -60,6 +60,7 @@ for (const file of commandFiles) {
 //         console.log(client);
 // 	}
 // });
+//console.log(client.commands.get('vcU').name);
 client.on('message', function(message) {
 	if (!message.content.startsWith(prefix) || message.author.bot){
         return;
@@ -67,14 +68,19 @@ client.on('message', function(message) {
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const command = args.shift().toLowerCase();
 	if (!client.commands.has(command)) return;
-
+    
 	try {
+
 		client.commands.get(command).execute(message, args);
 	} catch (error) {
 		console.error(error);
 		message.reply('there was an error trying to execute that command!');
 	}
 });
+
+
+
+
 client.distube
     .on("playSong", (message, queue, song) => message.channel.send(
         `Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}\n`

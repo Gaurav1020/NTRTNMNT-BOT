@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Gaurav Kumar Singh, Piyush Rajput, Kaartikeya Panjwani",
   "license": "ISC",
@@ -17,7 +17,9 @@
     "express": "^4.17.1",
     "ffmpeg-static": "^4.4.0",
     "mongoose": "^5.13.2",
-    "nodemon": "^2.0.11",
-    "ytdl": "^1.4.1"
+    "nodemon": "^2.0.12",
+    "opusscript": "^0.0.8",
+    "ytdl": "^1.4.1",
+    "ytdl-core": "^4.9.1"
   }
 }

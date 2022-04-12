@@ -9,8 +9,8 @@ module.exports = {
         }
         var challenger = args[0];
         var contender = args[1];
-        var challenger_id = args[0].substring(3,args[0].length - 1);
-        var contender_id = args[1].substring(3,args[1].length - 1);
+        var challenger_id = args[0].substring(2,args[0].length - 1);
+        var contender_id = args[1].substring(2,args[1].length - 1);
 
 // comment the next if statement to test agaisnt yourself
 
@@ -125,8 +125,8 @@ module.exports = {
                 message.channel.send(`${challenger}, Challenge timed out `);
             }
         })
-        //console.log(message.mentions.users);
-        //console.log(args);
+        console.log(message.mentions.users);
+        console.log(args);
     }
 }
         
